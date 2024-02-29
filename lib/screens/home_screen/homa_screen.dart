@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 import '../../utils/assets.dart';
+import '../../utils/navigation.dart';
 import '../../utils/theme.dart';
+import 'about_services_screen/about_srvices_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -27,11 +29,11 @@ class HomeScreen extends StatelessWidget {
             borderRadius: BorderRadius.circular(15),
             border: Border.all(color: AppColors.easyLightGreyColor),
           ),
-          child: const ListTile(
-            leading: Icon(Icons.fire_truck),
-            title: Text('Euro track'),
-            subtitle: Text('We can pick up your europe'),
-
+          child: ListTile(
+            onTap: ()=> navigateToScreen(context, const AboutServicesScreen()),
+            leading: const Icon(Icons.fire_truck),
+            title: const Text('Euro track'),
+            subtitle: const Text('We can pick up your europe'),
           ),
         ), separatorBuilder: (context, index) => const SizedBox(height: 10),
       ),
