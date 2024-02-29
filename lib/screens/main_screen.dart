@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../utils/assets.dart';
+import '../utils/theme.dart';
 import 'home_screen/homa_screen.dart';
 
 class MainScreen extends StatefulWidget {
@@ -14,6 +16,8 @@ class _MainScreenState extends State<MainScreen> {
     const HomeScreen(),
     Container(),
     Container(),
+    Container(),
+    Container(),
   ];
 
   int currentIndex = 0;
@@ -22,50 +26,49 @@ class _MainScreenState extends State<MainScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: pages[currentIndex],
-      bottomNavigationBar: SizedBox(
-        height: 85,
-        child: Theme(
-          data: ThemeData(
-            splashColor: Colors.transparent,
-            highlightColor: Colors.transparent,
-          ),
-          child: BottomNavigationBar(
-            onTap: (value) {
-              currentIndex = value;
-              setState(() {
-                //no-op
-              });
-            },
-            useLegacyColorScheme: false,
-            currentIndex: currentIndex,
-            type: BottomNavigationBarType.fixed,
-            selectedFontSize: 12,
-            selectedLabelStyle: const TextStyle(
-              fontWeight: FontWeight.w600,
-              height: 3,
+      bottomNavigationBar: Theme(
+        data: ThemeData(
+          splashColor: Colors.transparent,
+          highlightColor: Colors.transparent,
+        ),
+        child: BottomNavigationBar(
+          onTap: (value) {
+            currentIndex = value;
+            setState(() {
+              //no-op
+            });
+          },
+          elevation: 0,
+          backgroundColor: AppColors.whiteColor,
+          currentIndex: currentIndex,
+          type: BottomNavigationBarType.fixed,
+          items: [
+            BottomNavigationBarItem(
+              icon: AppIcons.category.svgPicture(),
+              label: '',
+              activeIcon: AppIcons.category.svgPicture(color: AppColors.orangeColor),
             ),
-            unselectedLabelStyle: const TextStyle(
-              fontWeight: FontWeight.w600,
-              height: 3,
+            BottomNavigationBarItem(
+              icon: AppIcons.history.svgPicture(),
+              label: '',
+              activeIcon: AppIcons.history.svgPicture(color: AppColors.orangeColor),
             ),
-            items: const [
-              BottomNavigationBarItem(
-                icon: Icon(Icons.category),
-                label: 'Esasy',
-                activeIcon: Icon(Icons.category, color: Colors.blue,),
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(Icons.bookmark_border_sharp),
-                label: 'Halanlarym',
-                activeIcon: Icon(Icons.bookmark_border_sharp, color: Colors.blue,),
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(Icons.person_2_outlined),
-                label: 'Sebedim',
-                activeIcon: Icon(Icons.person_2_outlined, color: Colors.blue,),
-              ),
-            ],
-          ),
+            BottomNavigationBarItem(
+              icon: AppIcons.notification.svgPicture(),
+              label: '',
+              activeIcon: AppIcons.notification.svgPicture(color: AppColors.orangeColor),
+            ),
+            BottomNavigationBarItem(
+              icon: AppIcons.products.svgPicture(),
+              label: '',
+              activeIcon: AppIcons.products.svgPicture(color: AppColors.orangeColor),
+            ),
+            BottomNavigationBarItem(
+              icon: AppIcons.person.svgPicture(),
+              label: '',
+              activeIcon: AppIcons.person.svgPicture(color: AppColors.orangeColor),
+            ),
+          ],
         ),
       ),
     );

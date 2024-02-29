@@ -16,9 +16,6 @@ class AppTheme {
     bottomNavigationBarTheme: const BottomNavigationBarThemeData(
       elevation: 0,
       backgroundColor: AppColors.whiteColor,
-      selectedItemColor: AppColors.orangeColor,
-      unselectedItemColor: AppColors.easyDarkGreyColor,
-      selectedLabelStyle: TextStyle(height: 4),
     ),
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ButtonStyle(
