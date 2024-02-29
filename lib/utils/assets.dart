@@ -2,11 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 enum AppIcons {
-  dots('dots'),
-  add('add'),
-  chevronLeft('chevron-left'),
+  repair('repair'),
+  call('call'),
+  category('category'),
+  clear('clear'),
+  filter('filter'),
+  history('history'),
+  notification('notification'),
+  products('products'),
   search('search'),
-  person('user-circle');
+  person('person');
 
   final String path;
 
