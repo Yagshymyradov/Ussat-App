@@ -5,15 +5,25 @@ import 'theme.dart';
 @immutable
 class AppTextStyles extends ThemeExtension<AppTextStyles> {
   final TextStyle? cardMedium;
+  final TextStyle? cardLarge;
   final TextStyle? smallButton;
 
-  const AppTextStyles({required this.cardMedium, required this.smallButton});
+  const AppTextStyles({
+    required this.cardMedium,
+    required this.smallButton,
+    required this.cardLarge,
+  });
 
   @override
-  AppTextStyles copyWith({TextStyle? cardMedium, TextStyle? smallButton}) {
+  AppTextStyles copyWith({
+    TextStyle? cardMedium,
+    TextStyle? smallButton,
+    TextStyle? cardLarge,
+  }) {
     return AppTextStyles(
       cardMedium: cardMedium ?? this.cardMedium,
       smallButton: smallButton ?? this.smallButton,
+      cardLarge: cardLarge ?? this.cardLarge,
     );
   }
 
@@ -25,6 +35,7 @@ class AppTextStyles extends ThemeExtension<AppTextStyles> {
     return AppTextStyles(
       cardMedium: cardMedium,
       smallButton: smallButton,
+      cardLarge: cardLarge,
     );
   }
 }
@@ -39,5 +50,10 @@ const TextStyleLight = AppTextStyles(
     fontSize: 14,
     fontWeight: FontWeight.w500,
     color: AppColors.whiteColor,
+  ),
+  cardLarge: TextStyle(
+    fontSize: 48,
+    fontWeight: FontWeight.w600,
+    color: AppColors.inkColor,
   ),
 );

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 enum AppIcons {
+  chevronRight('chevron-right'),
+  info('info'),
   time('time'),
   date('date'),
   add('add'),

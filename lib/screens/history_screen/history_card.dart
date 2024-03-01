@@ -20,7 +20,10 @@ class HistoryCard extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 8),
         child: Column(
           children: [
-            const CategoriesTile(borderColor: Colors.transparent),
+            CategoriesTile(
+              borderColor: Colors.transparent,
+              icon: AppIcons.repair.svgPicture(),
+            ),
             const SizedBox(height: 13),
             const Divider(),
             const SizedBox(height: 21),

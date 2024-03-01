@@ -30,14 +30,16 @@ class HomeScreen extends StatelessWidget {
           ],
         ),
         bottom: const PreferredSize(
-          preferredSize: Size(double.infinity, 44),
+          preferredSize: Size(double.infinity, 50),
           child: Search(),
         ),
       ),
       body: ListView.separated(
         padding: const EdgeInsets.all(20),
         itemCount: 5,
-        itemBuilder: (context, index) => const CategoriesTile(),
+        itemBuilder: (context, index) => CategoriesTile(
+          icon: AppIcons.repair.svgPicture(),
+        ),
         separatorBuilder: (context, index) => const SizedBox(height: 10),
       ),
     );
