@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../components/field_text.dart';
-import '../../../../components/stick.dart';
+import '../../../../components/text_with_stick.dart';
 import '../../../../utils/theme.dart';
 
 class AddDescription extends StatelessWidget {

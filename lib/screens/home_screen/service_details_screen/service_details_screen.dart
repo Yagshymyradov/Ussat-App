@@ -22,7 +22,10 @@ class ServicesDetailsScreen extends StatelessWidget {
         automaticallyImplyLeading: false,
         title: Row(
           children: [
-            AppIcons.chevronLeft.svgPicture(),
+            InkWell(
+              onTap: () => Navigator.pop(context),
+              child: AppIcons.chevronLeft.svgPicture(),
+            ),
             const SizedBox(width: 20),
             Expanded(
               child: Text('arassachylyk', style: textTheme.displayMedium),

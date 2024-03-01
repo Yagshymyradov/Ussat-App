@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../utils/assets.dart';
 import '../utils/theme.dart';
+import 'history_screen/history_screen.dart';
 import 'home_screen/home_screen.dart';
 
 class MainScreen extends StatefulWidget {
@@ -14,7 +15,7 @@ class MainScreen extends StatefulWidget {
 class _MainScreenState extends State<MainScreen> {
   final pages = [
     const HomeScreen(),
-    Container(),
+    const HistoryScreen(),
     Container(),
     Container(),
     Container(),

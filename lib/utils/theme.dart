@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'theme_extension.dart';
 
 class AppTheme {
   AppTheme._();
@@ -59,6 +60,7 @@ class AppTheme {
         color: AppColors.easyDarkGreyColor,
       ),
     ),
+    extensions: const [TextStyleLight],
     textTheme: const TextTheme(
       displayMedium: TextStyle(
         fontSize: 20,
@@ -66,7 +68,7 @@ class AppTheme {
         color: AppColors.easyDarkGreyColor,
       ),
       displaySmall: TextStyle(
-        fontSize: 16,
+        fontSize: 15,
         fontWeight: FontWeight.w500,
         color: AppColors.darkInkColor,
       ),
@@ -78,7 +80,7 @@ class AppTheme {
       titleSmall: TextStyle(
         fontSize: 12,
         fontWeight: FontWeight.w400,
-        color: AppColors.blackColor,
+        color: AppColors.easyDarkGreyColor,
       ),
       labelLarge: TextStyle(
         fontSize: 24,
@@ -150,4 +152,6 @@ extension BuildContextX on BuildContext {
   ThemeData get themeData => Theme.of(this);
 
   TextTheme get textTheme => Theme.of(this).textTheme;
+
+  AppTextStyles get appTextTheme => Theme.of(this).extension<AppTextStyles>()!;
 }

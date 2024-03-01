@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../components/stick.dart';
+import '../../../../components/text_with_stick.dart';
 import '../../../../utils/assets.dart';
 import '../../../../utils/theme.dart';
 

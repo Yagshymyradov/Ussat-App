@@ -6,17 +6,22 @@ import '../../utils/theme.dart';
 import 'service_details_screen/service_details_screen.dart';
 
 class CategoriesTile extends StatelessWidget {
-  const CategoriesTile({super.key});
+  final Color borderColor;
+
+  const CategoriesTile({
+    super.key,
+    this.borderColor = AppColors.easyLightGreyColor,
+  });
 
   @override
   Widget build(BuildContext context) {
-    final texTheme = context.textTheme;
+    final textTheme = context.textTheme;
     return InkWell(
       onTap: () => navigateToScreen(context, const ServicesDetailsScreen()),
       child: DecoratedBox(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(15),
-          border: Border.all(color: AppColors.easyLightGreyColor),
+          border: Border.all(color: borderColor),
         ),
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 11),
@@ -36,10 +41,10 @@ class CategoriesTile extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text('AC REPAIR', style: texTheme.titleMedium),
+                    Text('AC REPAIR', style: textTheme.titleMedium),
                     Text(
                       '1 sagadyn dowamynda ish  tamamlanyar',
-                      style: texTheme.titleSmall,
+                      style: textTheme.titleSmall,
                     ),
                   ],
                 ),
