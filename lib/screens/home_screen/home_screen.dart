@@ -16,22 +16,16 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         title: Row(
           children: [
-            const Stick(),
-            const SizedBox(width: 10),
             Expanded(
-              child: Text('Kategoriya', style: textTheme.labelLarge),
+              child: TextWithStick(
+                Text('Kategoriya', style: textTheme.labelLarge),
+              ),
             ),
             Text('Gyssagly jan', style: textTheme.labelMedium),
             const SizedBox(width: 11),
-            DecoratedBox(
-              decoration: BoxDecoration(
-                color: AppColors.orangeColor,
-                borderRadius: BorderRadius.circular(10),
-              ),
-              child: Padding(
-                padding: const EdgeInsets.all(6),
-                child: AppIcons.call.svgPicture(),
-              ),
+            IconButton(
+              onPressed: () {},
+              icon: AppIcons.call.svgPicture(),
             ),
           ],
         ),

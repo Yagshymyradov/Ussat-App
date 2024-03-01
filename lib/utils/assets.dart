@@ -2,6 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 enum AppIcons {
+  time('time'),
+  date('date'),
+  add('add'),
+  vila('vila'),
+  office('office'),
+  home('home'),
+  chevronLeft('chevron-left'),
+  questionCircle('question-circle'),
   repair('repair'),
   call('call'),
   category('category'),

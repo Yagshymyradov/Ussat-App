@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../../utils/assets.dart';
 import '../../utils/navigation.dart';
 import '../../utils/theme.dart';
-import 'about_services_screen/about_srvices_screen.dart';
+import 'service_details_screen/service_details_screen.dart';
 
 class CategoriesTile extends StatelessWidget {
   const CategoriesTile({super.key});
@@ -12,7 +12,7 @@ class CategoriesTile extends StatelessWidget {
   Widget build(BuildContext context) {
     final texTheme = context.textTheme;
     return InkWell(
-      onTap: () => navigateToScreen(context, const AboutServicesScreen()),
+      onTap: () => navigateToScreen(context, const ServicesDetailsScreen()),
       child: DecoratedBox(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(15),

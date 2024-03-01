@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../utils/assets.dart';
 import '../utils/theme.dart';
-import 'home_screen/homa_screen.dart';
+import 'home_screen/home_screen.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
