@@ -5,6 +5,7 @@ import '../utils/theme.dart';
 import 'history_screen/history_screen.dart';
 import 'home_screen/home_screen.dart';
 import 'notifications_screen/notifications_screen.dart';
+import 'products_screen/products_screen.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -18,7 +19,7 @@ class _MainScreenState extends State<MainScreen> {
     const HomeScreen(),
     const HistoryScreen(),
     const NotificationsScreen(),
-    Container(),
+    const ProductsScreen(),
     Container(),
   ];
 

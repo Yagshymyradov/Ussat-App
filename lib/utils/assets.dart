@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 enum AppIcons {
+  bottleCola('bottle-cola'),
+  basket('basket'),
   chevronRight('chevron-right'),
   info('info'),
   time('time'),

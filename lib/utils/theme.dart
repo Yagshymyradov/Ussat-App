@@ -38,6 +38,16 @@ class AppTheme {
         maximumSize: const MaterialStatePropertyAll(Size(double.infinity, 50)),
       ),
     ),
+    tabBarTheme: const TabBarTheme(
+      indicator: BoxDecoration(
+        border: BorderDirectional(bottom: BorderSide.none),
+      ),
+      dividerColor: Color(0xff979797),
+      tabAlignment: TabAlignment.start,
+      labelColor: AppColors.orangeColor,
+      labelPadding: EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+    ),
+    dividerColor: const Color(0xff979797),
     dividerTheme: const DividerThemeData(
       color: AppColors.dividerColor,
       space: 0,
@@ -135,6 +145,7 @@ class AppColors {
   static const dividerColor = Color(0xffeeeeee);
   static const lightGreyColor = Color(0xffd1d3d4);
   static const greyColor = Color(0xffc4c4c4);
+  static const borderGreyColor = Color(0xff7c7c7c);
   static const easyDarkGreyColor = Color(0xff6f767e);
 
   // static const darkGreyColor = Color(0xff686868);
