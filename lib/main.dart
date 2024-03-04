@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'screens/auth_screen/auth_screen.dart';
 import 'screens/main_screen.dart';
 import 'utils/theme.dart';
 
@@ -15,7 +16,7 @@ class UssatApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: AppTheme.lightTheme,
-      home: const MainScreen(),
+      home: const AuthScreen(),
     );
   }
 }

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 enum AppIcons {
+  logo('logo'),
+  ussat('ussat'),
   logout('logout'),
   instagram('instagram'),
   tikTok('tik-tok'),

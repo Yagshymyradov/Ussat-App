@@ -8,12 +8,14 @@ class AppTextStyles extends ThemeExtension<AppTextStyles> {
   final TextStyle? cardLarge;
   final TextStyle? smallButton;
   final TextStyle? settingsTitle;
+  final TextStyle? signButton;
 
   const AppTextStyles({
     required this.cardMedium,
     required this.smallButton,
     required this.cardLarge,
     required this.settingsTitle,
+    required this.signButton,
   });
 
   @override
@@ -22,12 +24,14 @@ class AppTextStyles extends ThemeExtension<AppTextStyles> {
     TextStyle? smallButton,
     TextStyle? cardLarge,
     TextStyle? settingsTitle,
+    TextStyle? signButton,
   }) {
     return AppTextStyles(
       cardMedium: cardMedium ?? this.cardMedium,
       smallButton: smallButton ?? this.smallButton,
       cardLarge: cardLarge ?? this.cardLarge,
       settingsTitle: settingsTitle ?? this.settingsTitle,
+      signButton: signButton ?? this.signButton,
     );
   }
 
@@ -41,6 +45,7 @@ class AppTextStyles extends ThemeExtension<AppTextStyles> {
       smallButton: smallButton,
       cardLarge: cardLarge,
       settingsTitle: settingsTitle,
+      signButton: signButton,
     );
   }
 }
@@ -65,5 +70,10 @@ const TextStyleLight = AppTextStyles(
     fontSize: 16,
     fontWeight: FontWeight.w600,
     color: Color(0xff686868),
+  ),
+  signButton: TextStyle(
+    fontSize: 13,
+    fontWeight: FontWeight.w600,
+    color: AppColors.orangeColor,
   ),
 );
