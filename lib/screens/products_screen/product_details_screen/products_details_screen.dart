@@ -13,17 +13,22 @@ class ProductsDetailsScreen extends StatelessWidget {
     final appTextTheme = context.appTextTheme;
     return Scaffold(
       appBar: AppBar(
+        titleSpacing: 10,
         automaticallyImplyLeading: false,
         title: Row(
           children: [
             InkWell(
+              borderRadius: BorderRadius.circular(10),
               onTap: () => Navigator.pop(context),
-              child: AppIcons.chevronLeft.svgPicture(
-                height: 18,
-                color: AppColors.blackColor,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+                child: AppIcons.chevronLeft.svgPicture(
+                  height: 18,
+                  color: AppColors.blackColor,
+                ),
               ),
             ),
-            const SizedBox(width: 36),
+            const SizedBox(width: 16),
             Text(
               'Detail',
               style: textTheme.labelLarge,

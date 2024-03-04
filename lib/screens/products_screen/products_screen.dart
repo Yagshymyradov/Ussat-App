@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import '../../components/search.dart';
 import '../../components/text_with_stick.dart';
 import '../../utils/assets.dart';
+import '../../utils/navigation.dart';
 import '../../utils/theme.dart';
+import 'basket_screen/basket_screen.dart';
 import 'product_card.dart';
 
 List<String> categories = [
@@ -33,7 +35,10 @@ class ProductsScreen extends StatelessWidget {
                   Text('Harytlar', style: textTheme.labelLarge),
                 ),
               ),
-              AppIcons.basket.svgPicture(),
+              InkWell(
+                onTap: () => navigateToScreen(context, const BasketScreen()),
+                child: AppIcons.basket.svgPicture(),
+              ),
               const SizedBox(width: 4),
             ],
           ),

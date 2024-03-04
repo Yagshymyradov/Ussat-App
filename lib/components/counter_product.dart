@@ -54,7 +54,7 @@ class _CounterProductState extends State<CounterProduct> {
             ),
             child: const Padding(
               padding: EdgeInsets.all(12),
-              child: Icon(Icons.remove),
+              child: Icon(Icons.remove, size: 15,),
             ),
           ),
         ),
@@ -90,6 +90,7 @@ class _CounterProductState extends State<CounterProduct> {
               child: Icon(
                 Icons.add,
                 color: AppColors.greenColor,
+                size: 15,
               ),
             ),
           ),
