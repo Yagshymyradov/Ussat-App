@@ -6,6 +6,7 @@ import 'history_screen/history_screen.dart';
 import 'home_screen/home_screen.dart';
 import 'notifications_screen/notifications_screen.dart';
 import 'products_screen/products_screen.dart';
+import 'profile_screen/profile_screen.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -20,7 +21,7 @@ class _MainScreenState extends State<MainScreen> {
     const HistoryScreen(),
     const NotificationsScreen(),
     const ProductsScreen(),
-    Container(),
+    const ProfileScreen(),
   ];
 
   int currentIndex = 0;
